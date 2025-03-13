@@ -1,0 +1,41 @@
+Sentence,Question,Item_condition,Group
+A_criança jogou a bola no carro do João e ele fez uma_tempestade_em_copo_d’água durante a tarde toda.,A criança jogou uma pedra no carro?,1.a,A
+João conseguiu a vaga na empresa e ele fez uma_tempestade_em_copo_d’água durante o dia todo.,João foi demitido da empresa?,1.b,B
+Mariana comprou um carro esportivo e o vídeo game fez uma_tempestade em_copo_d’água para ligar.,Mariana alugou um carro popular?,1.c,C
+O_furacão estava no ponto mais alto da escala e fez uma_tempestade forte no continente.,A tempestade aconteceu no continente?,1.d,D
+Depois do inverno intenso, o jornalista doente bateu as_botas no hospital.,O jornalista estava doente?,10.a,D
+Depois de estudar todos os dias, o gatinho bateu as_botas de velhice.,O gatinho estudava todos os dias?,10.b,A
+Depois da leitura do livro, o arquivo antigo bateu as_botas na ladeira.,O livro queimou na lareira?,10.c,B
+A_fazendeira trabalhou na lama e, ao chegar em casa, bateu os_sapatos na porta para limpá-los.,A fazendeira trabalhou no shopping?,10.d,C
+Só depois de mais de cinco dias de treinamento foi que caiu a_ficha do Pedro de que aquele lugar não era bom para trabalhar.,Aquele era um lugar bom para trabalhar?,2.a,D
+Só depois de Zeus criar o relâmpago foi que caiu a_ficha da Laura de que ela era uma pessoa útil.,Zeus é pai do Thor?,2.b,A
+Só depois de Laís criar o jogo foi que caiu a_ficha do leão de que a criança estava doente.,Laís brincou com o leão?,2.c,B
+Só depois de sair do hospital foi que Clara percebeu que a ficha da paciente ainda estava em suas mãos.,A ficha estava nas mãos de Clara?,2.d,C
+O_professor viu que a atividade do Carlos estava errada, mas fez vista_grossa para o problema.,A atividade de Carlos estava certa?,3.a,C
+A_professora notou que a atividade da aluna estava certa, mas fez vista_grossa para o problema.,A atividade da aluna estava certa?,3.b,D
+A_enfermeira percebeu que o medicamento estava correto, mas fez vista_grossa para a louça.,O medicamento estava errado?,3.c,A
+A_visão da Maria estava turva, e ela tentou ver melhor, mas a vista ficou embaçada demais.,A vista ficou embaçada demais?,3.d,B
+Joana não concordou com a opinião do Mário e mandou ele ir catar_coquinho fora dali.,Joana discordou da opinião de Mário?,4.a,B
+Márcio não quis atrapalhar a reunião e Jéssica mandou a Ana ir catar_coquinho fora dali.,Márcio quis atrapalhar a reunião?,4.b,C
+Cláudia criou o livro de receitas e Sérgio mandou o violão ir catar_coquinho fora dali.,Sérgio escreveu um livro?,4.c,D
+Letícia e os amigos foram à praia para catar coquinhos caídos na areia.,Letícia e os amigos foram ao parque?,4.d,A
+Cíntia escondeu a verdade dos amigos por muito tempo, agora está na hora de pôr os_pingos_nos_‘is’ e contar tudo.,Cíntia escondeu a verdade dos amigos?,5.a,A
+Clara disse a verdade para seus amigos por muito tempo, agora está na hora de pôr os_pingos_nos_‘is’ e contar tudo.,Os amigos sabem a verdade?,5.b,B
+Sara iniciou a reunião tarde por muito tempo, agora o ventilador decidiu pôr os_pingos_nos_‘is’ e deixar a janela.,O ventilador deixou a janela?,5.c,C
+O_professor pediu para os alunos completarem a atividade e pôr os_pingos_nos_‘is’ de todas as palavras.,A atividade dos alunos estava completa?,5.d,D
+O_vizinho não estava em casa, então pediu para Sofia quebrar o_galho e alimentar o cachorro dele.,O vizinho pediu para Sofia alimentar o cachorro?,6.a,D
+Minha amiga estava sem dinheiro e pediu para Maisa quebrar o_galho e cantar durante a prova dela.,A amiga tinha dinheiro?,6.b,A
+Ele jogou futebol e o carro quebrou o_galho e limpou a cozinha.,A cozinha foi limpa?,6.c,B
+Ao podar a árvore, o jardineiro quebrou o_galho que estava seco.,O galho estava seco?,6.d,C
+Amanda foi ao cinema com um casal de amigos, mas acabou segurando vela durante todo o filme.,Amanda foi ao restaurante com um casal de amigos?,7.a,C
+Felipe foi ao jogo com as amigas, e Marcus ficou segurando vela durante a aula de ciências.,Felipe foi ao jogo com o Marcus?,7.b,D
+Jonas foi ao shopping de táxi e o pedal começou a segurar vela durante a viagem.,Jonas foi à feira?,7.c,A
+Tiago ficou ao lado dos amigos segurando a_vela para eles acenderem e a colocarem no bolo de aniversário.,Tiago ficou ao lado do cachorro?,7.d,B
+Na_festa de formatura, Roberto se empolgou e soltou a_franga na pista de dança.,Roberto estava empolgado?,8.a,B
+No_parque da cidade, Júlia se cuidou e soltou a_franga na seção de pães.,Júlia estava na seção de laticínios?,8.b,C
+Na_televisão do carro, Gabriel se desligou e soltou a_franga na prova de escrita.,Gabriel fez prova oral?,8.c,D
+Na_fazenda da família, Lucas resolveu salvar os animais e soltou a_franga que estava no galinheiro.,A franga estava no estábulo?,8.d,A
+Após a briga, os irmãos sentaram-se para lavar roupa_suja e remoer o passado.,Os irmãos brigaram?,9.a,A
+Após a festa, os inimigos reuniram-se para lavar roupa_suja e descansar os olhos.,Os olhos estavam cansados?,9.b,B
+Após consulta, os bancos juntaram-se para lavar roupa_suja e preparar um bolo de cenoura.,Os bancos se juntaram antes da consulta?,9.c,C
+Vitor foi até a lavanderia para lavar roupa_suja e aproveitou e limpou o tanque.,O tanque estava sujo?,9.d,D
