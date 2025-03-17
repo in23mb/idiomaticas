@@ -1,6 +1,6 @@
 PennController.ResetPrefix(null);
 
-Sequence("Start", "TCLE1","TCLE2","TCLE3","TCLE4","Profile","Instructions1","Instructions2","Instructions3","Test","Test1", "Test2", "TestEnd",randomize("experimental"), SendResults(),"WaitForResults","Final");
+Sequence("Start", "TCLE1","TCLE2","TCLE3","TCLE4","Profile","Instructions1","Instructions2","Instructions3","Test","Test1", "Test2", "TestEnd",randomize("experimental"), SendResults(),"WaitForResults","TestCancel","Final");
 //Start: tela de boas-vindas
 //TCLE1, TCLE2, TCLE3, TCLE4: 4 partes do termo de consentimento 
 //Profile: perfil do participante
@@ -9,6 +9,7 @@ Sequence("Start", "TCLE1","TCLE2","TCLE3","TCLE4","Profile","Instructions1","Ins
 //randomize("Itens"): apresentação randômica dos itens experimentais
 //SendResults(): envio dos dados para o servidor
 //WaitForResults: esperar 3 segundos para o envio dos resultados
+//TextCancel: tela de cancelamento do teste
 //Final:tela final de encerramento
 
 newTrial("Start",
@@ -42,11 +43,26 @@ newTrial("TCLE1",
         .css("font-size", "1.3em")
         .print()
     ,
-    newButton("Continuar (2/4)")
-        .print()
-        .css("font-size", "1.2em")
+    newCanvas("botoes", 400, 50)  // criar um "quadrado" para a disposição dos botões 
+        .add( 0, 0, newButton("back", "Voltar")
+            .css("font-size", "1.2em")
+            .print()
+        ) 
+        .add( 200, 0, newButton("next", "Continuar (2/4)")
+            .css("font-size", "1.2em")
+            .print()
+        ) 
         .center()
+        .print()
+    ,
+    newSelector("selecionaBotao") //seletor para escolher um botão
+        .add(getButton("back"), getButton("next"))
         .wait()
+        .log()
+    ,
+    getSelector("selecionaBotao").test.selected()
+        .and( getSelector("selecionaBotao").test.selected(getButton("back")).success(jump("Start")) )
+        .and( getSelector("selecionaBotao").test.selected(getButton("next")).success(jump("TCLE2")) )
 );
 
 newTrial("TCLE2",
@@ -60,11 +76,11 @@ newTrial("TCLE2",
         .print()
    ,
     newCanvas("botoes", 400, 50)  // criar um "quadrado" para a disposição dos botões 
-        .add( 0, 0, newButton("Voltar (1/4)")
+        .add( 0, 0, newButton("back", "Voltar (1/4)")
             .css("font-size", "1.2em")
             .print()
         ) 
-        .add( 200, 0, newButton("Continuar (3/4)")
+        .add( 200, 0, newButton("next", "Continuar (3/4)")
             .css("font-size", "1.2em")
             .print()
         ) 
@@ -72,13 +88,13 @@ newTrial("TCLE2",
         .print()
     ,
     newSelector("selecionaBotao") //seletor para escolher um botão
-        .add(getButton("Voltar (1/4)"), getButton("Continuar (3/4)"))
+        .add(getButton("back"), getButton("next"))
         .wait()
         .log()
     ,
-    getSelector("selecionaBotao").test.selected(getButton("Voltar (1/4)"))
-        .success( jump("TCLE1") ) // Se "Voltar" for clicado, vai para TCLE1
-        .failure( jump("TCLE3") ) // Se "Continuar" for clicado, vai para TCLE3
+    getSelector("selecionaBotao").test.selected()
+        .and( getSelector("selecionaBotao").test.selected(getButton("back")).success(jump("TCLE1")) )
+        .and( getSelector("selecionaBotao").test.selected(getButton("next")).success(jump("TCLE3")) )
 );
 
 newTrial("TCLE3",
@@ -92,25 +108,25 @@ newTrial("TCLE3",
         .print()
     ,
     newCanvas("botoes", 400, 50)  
-        .add( 0, 0, newButton("Voltar (2/4)")
+        .add( 0, 0, newButton("back", "Voltar (2/4)")
             .css("font-size", "1.2em")
             .print()
         ) 
-        .add( 200, 0, newButton("Continuar (4/4)")
+        .add( 200, 0, newButton("next", "Continuar (4/4)")
             .css("font-size", "1.2em")
             .print()
         ) 
         .center()
         .print()
     ,
-    newSelector("selecionaBotao") 
-        .add(getButton("Voltar (2/4)"), getButton("Continuar (4/4)"))
+    newSelector("selecionaBotao") //seletor para escolher um botão
+        .add(getButton("back"), getButton("next"))
         .wait()
         .log()
     ,
-    getSelector("selecionaBotao").test.selected(getButton("Voltar (2/4)"))
-        .success( jump("TCLE2") ) // Se "Voltar" for clicado, vai para TCLE2
-        .failure( jump("TCLE4") ) // Se "Continuar" for clicado, vai para TCLE4
+    getSelector("selecionaBotao").test.selected()
+        .and( getSelector("selecionaBotao").test.selected(getButton("back")).success(jump("TCLE2")) )
+        .and( getSelector("selecionaBotao").test.selected(getButton("next")).success(jump("TCLE4")) )
 );
 
 newTrial("TCLE4",
@@ -123,26 +139,32 @@ newTrial("TCLE4",
         .css("font-size", "1.3em")
         .print()
    ,
-    newCanvas("botoes", 400, 50)  
-        .add( 0, 0, newButton("Voltar (3/4)")
+    newCanvas("botoes", 600, 50)  
+        .add( 0, 0, newButton("back", "Voltar (3/4)")
             .css("font-size", "1.2em")
             .print()
         ) 
-        .add( 200, 0, newButton("Aceito participar")
+        .add( 200, 0, newButton("end", "Não Aceito")
+            .css("font-size", "1.2em")
+            .callback( jump("TestEnd") )
+            .print()
+        ) 
+        .add( 400, 0, newButton("next", "ACEITO participar!")
             .css("font-size", "1.2em")
             .print()
         ) 
         .center()
         .print()
     ,
-    newSelector("selecionaBotao") 
-        .add(getButton("Voltar (3/4)"), getButton("Aceito participar"))
+    newSelector("selecionaBotao") //seletor para escolher um botão
+        .add(getButton("back"), getButton("end"), getButton("next"))
         .wait()
         .log()
     ,
-    getSelector("selecionaBotao").test.selected(getButton("Voltar (3/4)"))
-        .success( jump("TCLE3") ) // Se "Voltar" for clicado, vai para TCLE3
-        .failure( jump("Profile") ) // Se "Aceito participar" for clicado, vai para Profile
+    getSelector("selecionaBotao").test.selected()
+        .and( getSelector("selecionaBotao").test.selected(getButton("back")).success(jump("TCLE3")) )
+        .and( getSelector("selecionaBotao").test.selected(getButton("end")).success(jump("TestCancel")) )
+        .and( getSelector("selecionaBotao").test.selected(getButton("next")).success(jump("Profile")) )
 );
 
 newTrial("Profile",
@@ -437,7 +459,19 @@ newTrial("TestEnd",
         .print()
         .wait()
 );
-Template("Exp_Itens_grupos_teste.csv",
+newTrial("TestCancel",
+    newText("<p><strong>Obrigada, o teste foi Cancelado.</strong></p>")
+        .css("font-size", "1.3em")
+        .center()
+        .print()
+    ,
+    newButton("Finalizar")
+        .css("font-size", "1.2em")
+        .center()
+        .print()
+        .wait(end())
+);
+Template("Exp_Itens_grupos_teste.csv", 
 variable => newTrial("experimental",
     newController("DashedSentence", {s: variable.Sentence})
         .print()
@@ -449,6 +483,7 @@ variable => newTrial("experimental",
     newText("Pergunta", variable.Question)
         .css("font-size", "1.3em")
         .css("text-align", "center")
+        .center()
         .print()
     ,
 newCanvas("botoes", 400, 80) 

@@ -39,3 +39,83 @@
 "Após a festa, os inimigos reuniram-se para lavar roupa_suja e descansar os olhos.",Os olhos estavam cansados?,9.b,B
 "Após consulta, os bancos juntaram-se para lavar roupa_suja e preparar um bolo de cenoura.",Os bancos se juntaram antes da consulta?,9.c,C
 "Vitor foi até a lavanderia para lavar roupa_suja e aproveitou e limpou o tanque.",O tanque estava sujo?,9.d,D
+"O_cachorro correu pelo parque e pegou a bolinha antes de ela cair no buraco.",O cachorro pegou a bolinha?,Distrator,A
+"Ana comprou um novo livro de romance e passou a tarde inteira lendo.",Ana comprou um disco de vinil?,Distrator,A
+"O_ônibus estava lotado, então Vicente decidiu caminhar até sua casa.",Vicente conseguiu entrar no ônibus?,Distrator,A
+"O_quarto estava abafado, então Mariana abriu a janela para deixar o ar fresco entrar no quarto.",Mariana fechou a janela?,Distrator,A
+"O_aluno estudou para a prova da disciplina difícil e conseguiu tirar uma nota excelente.",O aluno não estudou para a prova?,Distrator,A
+"O_vento estava tão forte que derrubou algumas cadeiras do quintal.",O vento estava fraco?,Distrator,A
+"João comprou flores para dar de presente no aniversário da mãe.",João comprou um bolo?,Distrator,A
+"O_vizinho reformou a casa velha e pintou as paredes de azul claro.",O vizinho pintou as paredes de vermelho?,Distrator,A
+"Carla fez um bolo de chocolate e levou para a festa dos colegas.",Carla levou brigadeiros para a festa?,Distrator,A
+"Tiago estava dormindo, então o telefone tocou cinco vezes antes dele atender.",Tiago atendeu o telefone?,Distrator,A
+"A_professora pediu silêncio para que os alunos conseguissem se concentrar.",A professora pediu que os alunos conversassem mais?,Distrator,A
+"Valéria pediu para o menino colocar os brinquedos na caixa depois de brincar.",O menino deixou os brinquedos espalhados no chão?,Distrator,A
+"No_inverno, as temperaturas caíram e a cidade ficou coberta de neblina.",A cidade ficou muito quente no inverno?,Distrator,A
+"Depois do almoço, Júlia lavou a louça e organizou a cozinha.",Júlia deixou a cozinha bagunçada?,Distrator,A
+"O_avião pousou no aeroporto com alguns minutos de atraso.",O avião pousou no horário exato?,Distrator,A
+"Marcos esqueceu o guarda-chuva em casa e chegou ao trabalho molhado.",Marcos levou o guarda-chuva para o trabalho?,Distrator,A
+"O_professor explicou o conteúdo novamente porque alguns alunos não entenderam.",Todos os alunos entenderam o conteúdo de primeira?,Distrator,A
+"A_torneira ficou pingando a noite toda e desperdiãou muita água.",A torneira estava bem fechada?,Distrator,A
+"No_fim de semana, os amigos decidiram fazer uma trilha para a cachoeira.",Os amigos passaram o fim de semana em casa?,Distrator,A
+"O_gato pulou no sofá e logo depois subiu na mesa.",O gato ficou no chão o tempo todo?,Distrator,A
+"O_cachorro correu pelo parque e pegou a bolinha antes de ela cair no buraco.",O cachorro pegou a bolinha?,Distrator,B
+"Ana comprou um novo livro de romance e passou a tarde inteira lendo.",Ana comprou um disco de vinil?,Distrator,B
+"O_ônibus estava lotado, então Vicente decidiu caminhar até sua casa.",Vicente conseguiu entrar no ônibus?,Distrator,B
+"O_quarto estava abafado, então Mariana abriu a janela para deixar o ar fresco entrar no quarto.",Mariana fechou a janela?,Distrator,B
+"O_aluno estudou para a prova da disciplina difícil e conseguiu tirar uma nota excelente.",O aluno não estudou para a prova?,Distrator,B
+"O_vento estava tão forte que derrubou algumas cadeiras do quintal.",O vento estava fraco?,Distrator,B
+"João comprou flores para dar de presente no aniversário da mãe.",João comprou um bolo?,Distrator,B
+"O_vizinho reformou a casa velha e pintou as paredes de azul claro.",O vizinho pintou as paredes de vermelho?,Distrator,B
+"Carla fez um bolo de chocolate e levou para a festa dos colegas.",Carla levou brigadeiros para a festa?,Distrator,B
+"Tiago estava dormindo, então o telefone tocou cinco vezes antes dele atender.",Tiago atendeu o telefone?,Distrator,B
+"A_professora pediu silêncio para que os alunos conseguissem se concentrar.",A professora pediu que os alunos conversassem mais?,Distrator,B
+"Valéria pediu para o menino colocar os brinquedos na caixa depois de brincar.",O menino deixou os brinquedos espalhados no chão?,Distrator,B
+"No_inverno, as temperaturas caíram e a cidade ficou coberta de neblina.",A cidade ficou muito quente no inverno?,Distrator,B
+"Depois do almoço, Júlia lavou a louça e organizou a cozinha.",Júlia deixou a cozinha bagunçada?,Distrator,B
+"O_avião pousou no aeroporto com alguns minutos de atraso.",O avião pousou no horário exato?,Distrator,B
+"Marcos esqueceu o guarda-chuva em casa e chegou ao trabalho molhado.",Marcos levou o guarda-chuva para o trabalho?,Distrator,B
+"O_professor explicou o conteúdo novamente porque alguns alunos não entenderam.",Todos os alunos entenderam o conteúdo de primeira?,Distrator,B
+"A_torneira ficou pingando a noite toda e desperdiãou muita água.",A torneira estava bem fechada?,Distrator,B
+"No_fim de semana, os amigos decidiram fazer uma trilha para a cachoeira.",Os amigos passaram o fim de semana em casa?,Distrator,B
+"O_gato pulou no sofá e logo depois subiu na mesa.",O gato ficou no chão o tempo todo?,Distrator,B
+"O_cachorro correu pelo parque e pegou a bolinha antes de ela cair no buraco.",O cachorro pegou a bolinha?,Distrator,C
+"Ana comprou um novo livro de romance e passou a tarde inteira lendo.",Ana comprou um disco de vinil?,Distrator,C
+"O_ônibus estava lotado, então Vicente decidiu caminhar até sua casa.",Vicente conseguiu entrar no ônibus?,Distrator,C
+"O_quarto estava abafado, então Mariana abriu a janela para deixar o ar fresco entrar no quarto.",Mariana fechou a janela?,Distrator,C
+"O_aluno estudou para a prova da disciplina difícil e conseguiu tirar uma nota excelente.",O aluno não estudou para a prova?,Distrator,C
+"O_vento estava tão forte que derrubou algumas cadeiras do quintal.",O vento estava fraco?,Distrator,C
+"João comprou flores para dar de presente no aniversário da mãe.",João comprou um bolo?,Distrator,C
+"O_vizinho reformou a casa velha e pintou as paredes de azul claro.",O vizinho pintou as paredes de vermelho?,Distrator,C
+"Carla fez um bolo de chocolate e levou para a festa dos colegas.",Carla levou brigadeiros para a festa?,Distrator,C
+"Tiago estava dormindo, então o telefone tocou cinco vezes antes dele atender.",Tiago atendeu o telefone?,Distrator,C
+"A_professora pediu silêncio para que os alunos conseguissem se concentrar.",A professora pediu que os alunos conversassem mais?,Distrator,C
+"Valéria pediu para o menino colocar os brinquedos na caixa depois de brincar.",O menino deixou os brinquedos espalhados no chão?,Distrator,C
+"No_inverno, as temperaturas caíram e a cidade ficou coberta de neblina.",A cidade ficou muito quente no inverno?,Distrator,C
+"Depois do almoço, Júlia lavou a louça e organizou a cozinha.",Júlia deixou a cozinha bagunçada?,Distrator,C
+"O_avião pousou no aeroporto com alguns minutos de atraso.",O avião pousou no horário exato?,Distrator,C
+"Marcos esqueceu o guarda-chuva em casa e chegou ao trabalho molhado.",Marcos levou o guarda-chuva para o trabalho?,Distrator,C
+"O_professor explicou o conteúdo novamente porque alguns alunos não entenderam.",Todos os alunos entenderam o conteúdo de primeira?,Distrator,C
+"A_torneira ficou pingando a noite toda e desperdiãou muita água.",A torneira estava bem fechada?,Distrator,C
+"No_fim de semana, os amigos decidiram fazer uma trilha para a cachoeira.",Os amigos passaram o fim de semana em casa?,Distrator,C
+"O_gato pulou no sofá e logo depois subiu na mesa.",O gato ficou no chão o tempo todo?,Distrator,C
+"O_cachorro correu pelo parque e pegou a bolinha antes de ela cair no buraco.",O cachorro pegou a bolinha?,Distrator,D
+"Ana comprou um novo livro de romance e passou a tarde inteira lendo.",Ana comprou um disco de vinil?,Distrator,D
+"O_ônibus estava lotado, então Vicente decidiu caminhar até sua casa.",Vicente conseguiu entrar no ônibus?,Distrator,D
+"O_quarto estava abafado, então Mariana abriu a janela para deixar o ar fresco entrar no quarto.",Mariana fechou a janela?,Distrator,D  
+"O_aluno estudou para a prova da disciplina difícil e conseguiu tirar uma nota excelente.",O aluno não estudou para a prova?,Distrator,D
+"O_vento estava tão forte que derrubou algumas cadeiras do quintal.",O vento estava fraco?,Distrator,D
+"João comprou flores para dar de presente no aniversário da mãe.",João comprou um bolo?,Distrator,D
+"O_vizinho reformou a casa velha e pintou as paredes de azul claro.",O vizinho pintou as paredes de vermelho?,Distrator,D
+"Carla fez um bolo de chocolate e levou para a festa dos colegas.",Carla levou brigadeiros para a festa?,Distrator,D
+"Tiago estava dormindo, então o telefone tocou cinco vezes antes dele atender.",Tiago atendeu o telefone?,Distrator,D
+"A_professora pediu silêncio para que os alunos conseguissem se concentrar.",A professora pediu que os alunos conversassem mais?,Distrator,D
+"Valéria pediu para o menino colocar os brinquedos na caixa depois de brincar.",O menino deixou os brinquedos espalhados no chão?,Distrator,D
+"No_inverno, as temperaturas caíram e a cidade ficou coberta de neblina.",A cidade ficou muito quente no inverno?,Distrator,D
+"Depois do almoço, Júlia lavou a louça e organizou a cozinha.",Júlia deixou a cozinha bagunçada?,Distrator,D
+"O_avião pousou no aeroporto com alguns minutos de atraso.",O avião pousou no horário exato?,Distrator,D
+"Marcos esqueceu o guarda-chuva em casa e chegou ao trabalho molhado.",Marcos levou o guarda-chuva para o trabalho?,Distrator,D
+"O_professor explicou o conteúdo novamente porque alguns alunos não entenderam.",Todos os alunos entenderam o conteúdo de primeira?,Distrator,D
+"A_torneira ficou pingando a noite toda e desperdiãou muita água.",A torneira estava bem fechada?,Distrator,D
+"No_fim de semana, os amigos decidiram fazer uma trilha para a cachoeira.",Os amigos passaram o fim de semana em casa?,Distrator,D
+"O_gato pulou no sofá e logo depois subiu na mesa.",O gato ficou no chão o tempo todo?,Distrator,D
