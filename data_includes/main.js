@@ -475,7 +475,7 @@ Template("Exp_Itens_grupos_teste.csv",
 variable => newTrial("experimental",
     newController("DashedSentence", {s: variable.Sentence})
         .print()
-        .center()
+        .css("font-size", "1.3em")
         .log()
         .wait()
         .remove()
@@ -483,6 +483,7 @@ variable => newTrial("experimental",
     newText("Pergunta", variable.Question)
         .css("font-size", "1.3em")
         .css("text-align", "center")
+        .css("margin-botton", "1.3em")
         .center()
         .print()
     ,
