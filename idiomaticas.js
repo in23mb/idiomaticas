@@ -437,7 +437,7 @@ newTrial("TestEnd",
         .print()
         .wait()
 );
-Template("idioFrases.csv",
+Template("Exp_Itens_grupos_teste.csv",
 variable => newTrial("experimental",
     newController("DashedSentence", {s: variable.Sentence})
         .print()
