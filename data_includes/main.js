@@ -483,7 +483,7 @@ variable => newTrial("experimental",
     newText("Pergunta", variable.Question)
         .css("font-size", "1.3em")
         .css("text-align", "center")
-        .css("margin-botton", "1.3em")
+        .css("margin-bottom","1.3em")
         .log()
         .center()
         .print()
