@@ -1,6 +1,6 @@
 PennController.ResetPrefix(null);
 
-Sequence("Start", "TCLE1","TCLE2","TCLE3","TCLE4","Profile","Instructions1","Instructions2","Instructions3","Test","Test1", "Test2", "TestEnd",randomize("experimental"), SendResults(),"WaitForResults","TestCancel","Final");
+Sequence("Start", "TCLE1","TCLE2","TCLE3","TCLE4","Profile","Instructions1","Instructions2","Instructions3","Test","Test1", "Test2", "TestEnd",randomize("experimental"), SendResults(),"WaitForResults","Final","TestCancel");
 //Start: tela de boas-vindas
 //TCLE1, TCLE2, TCLE3, TCLE4: 4 partes do termo de consentimento 
 //Profile: perfil do participante
