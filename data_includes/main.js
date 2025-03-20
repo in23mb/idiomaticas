@@ -1,6 +1,15 @@
 PennController.ResetPrefix(null);
 
-Sequence("Start", "TCLE1","TCLE2","TCLE3","TCLE4","Profile","Instructions1","Instructions2","Instructions3","Test","Test1", "Test2", "TestEnd",randomize("experimental"), SendResults(),"WaitForResults","Final","ExpCancel");
+newVar("participacao").global().set("manter"); // Valor inicial "manter" para a variável global "participacao"
+
+Sequence(
+    "Start", "TCLE1", "TCLE2", "TCLE3", "TCLE4", "Profile", 
+    "Instructions1", "Instructions2", "Instructions3", 
+    "Test", "Test1", "Test2", "TestEnd", randomize("experimental"), 
+    SendResults(), "WaitForResults", 
+    getVar("participacao").test.is("cancelar").success("ExpCancel"), 
+    "Final"
+);
 //Start: tela de boas-vindas
 //TCLE1, TCLE2, TCLE3, TCLE4: 4 partes do termo de consentimento 
 //Profile: perfil do participante
@@ -542,18 +551,24 @@ newTrial("Final",
     newCanvas("botoes", 500, 50)  
         .add( 0, 0, newButton("cancelExp", "Cancelar Participação")
             .css("font-size", "1.2em")
-            .callback( jump("ExpCancel") )
+            .callback( 
+                getVar("participacao").set("cancelar"),  // Define a participação como cancelada
+                jump("ExpCancel")  // Leva o participante para a tela de cancelamento
+            )
             .print()
         ) 
         .add( 250, 0, newButton("confirm", "Manter participação e finalizar")
             .css("font-size", "1.2em")
-            .callback( end() )
+            .callback( 
+                getVar("participacao").set("manter"),  // Define a participação como mantida
+                end()  // Finaliza o experimento
+            )
             .print()
         ) 
         .center()
         .print()
     ,
-    newSelector("selecionaBotao") //seletor para escolher um botão
+    newSelector("selecionaBotao") // Seletor para os botões
         .add(getButton("cancelExp"), getButton("confirm"))
         .wait()
         .log()
