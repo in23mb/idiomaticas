@@ -197,7 +197,7 @@ newTrial("Profile",
     ,
     newDropDown("Audicao", "Selecione")
         .css("font-size", "1.2em")
-        .add("Surdo", "Ouvinte")
+        .add("Surdo(a)", "Ouvinte")
         .print()
     ,
     newText("<p>Nacionalidade:</p>")
@@ -206,7 +206,7 @@ newTrial("Profile",
     ,
     newDropDown("Nacionalidade", "Selecione")
         .css("font-size", "1.2em")
-        .add("Brasileiro", "Estrangeiro")
+        .add("Brasileiro(a)", "Estrangeiro(a)")
         .print()
     ,
     newText("<p>Qual é a sua primeira língua?</p>")
@@ -356,7 +356,6 @@ newTrial("Test1",
     ,
     newController("DashedSentence", {s: "O_galo cantou em cima do muro ao nascer do sol."})
         .css("font-size", "1.3em")
-        .center()
         .print()
         .log()
         .wait()
@@ -406,7 +405,6 @@ newTrial("Test2",
     ,
     newController("DashedSentence", {s: "Flávia e suas amigas estudaram juntas durante a tarde."})
         .css("font-size", "1.3em")
-        .center()
         .print()
         .log()
         .wait()
@@ -541,13 +539,13 @@ newTrial("Final",
         .center()
         .print()
     ,
-    newCanvas("botoes", 400, 50)  
+    newCanvas("botoes", 500, 50)  
         .add( 0, 0, newButton("cancelExp", "Cancelar Participação")
             .css("font-size", "1.2em")
             .callback( jump("ExpCancel") )
             .print()
         ) 
-        .add( 200, 0, newButton("confirm", "Manter participação e finalizar")
+        .add( 250, 0, newButton("confirm", "Manter participação e finalizar")
             .css("font-size", "1.2em")
             .callback( end() )
             .print()
