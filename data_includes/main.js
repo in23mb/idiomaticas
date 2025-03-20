@@ -550,12 +550,10 @@ newTrial("Final",
     newCanvas("botoes", 500, 50)  
         .add( 0, 0, newButton("cancelExp", "Cancelar Participação")
             .css("font-size", "1.2em")
-            .callback( getVar("participacao").set("cancelar") )
             .print()
         ) 
         .add( 250, 0, newButton("confirm", "Manter participação e finalizar")
             .css("font-size", "1.2em")
-            .callback( getVar("participacao").set("manter") )
             .print()
         ) 
         .center()
@@ -566,9 +564,17 @@ newTrial("Final",
         .wait()
         .log()
     ,
-    getVar("participacao").test.is("cancelar") 
-        .success( jump("ExpCancel") ) // Se "cancelar" foi escolhido, pula para ExpCancel
-        .failure( end() ) // Caso contrário, encerra o experimento normalmente
+    getSelector("selecionaBotao").test.selected(getButton("cancelExp"))
+        .success(
+            getVar("participacao").set("cancelar"),
+            jump("ExpCancel") // Agora o jump funciona corretamente
+        )
+    ,
+    getSelector("selecionaBotao").test.selected(getButton("confirm"))
+        .success(
+            getVar("participacao").set("manter"),
+            end() // Termina o experimento corretamente
+        )
 );
 
 newTrial("ExpCancel",
