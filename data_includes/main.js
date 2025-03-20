@@ -1,6 +1,6 @@
 PennController.ResetPrefix(null);
 
-Sequence("Start", "TCLE1", "TCLE2", "TCLE3", "TCLE4", "Profile", "Instructions1", "Instructions2", "Instructions3", "Test", "Test1", "Test2", "TestEnd", randomize("experimental"), SendResults(), "WaitForResults", "Final");
+Sequence("Start", "TCLE1","TCLE2","TCLE3","TCLE4","Profile","Instructions1","Instructions2","Instructions3","Test","Test1", "Test2", "TestEnd",randomize("experimental"), SendResults(),"WaitForResults","Final","ExpCancel");
 //Start: tela de boas-vindas
 //TCLE1, TCLE2, TCLE3, TCLE4: 4 partes do termo de consentimento 
 //Profile: perfil do participante
@@ -9,7 +9,8 @@ Sequence("Start", "TCLE1", "TCLE2", "TCLE3", "TCLE4", "Profile", "Instructions1"
 //randomize("Itens"): apresentação randômica dos itens experimentais
 //SendResults(): envio dos dados para o servidor
 //WaitForResults: esperar 3 segundos para o envio dos resultados
-//Final: tela final de encerramento
+//TextCancel: tela de cancelamento do teste
+//Final:tela final de encerramento
 
 newTrial("Start",
     newText("<p>Bem-vindo(a) ao nosso experimento!</p>")
@@ -145,7 +146,7 @@ newTrial("TCLE4",
         ) 
         .add( 200, 0, newButton("end", "Não Aceito")
             .css("font-size", "1.2em")
-            .callback( jump("ExpCancel") )
+            .callback( jump("TestEnd") )
             .print()
         ) 
         .add( 400, 0, newButton("next", "ACEITO participar!")
@@ -169,7 +170,7 @@ newTrial("TCLE4",
 newTrial("Profile",
     newText("<p>Obrigada por confirmar sua participação! Agora precisamos que você nos dê algumas informações para confirmarmos o seu perfil.</p>")
         .css("font-size", "1.4em")
-        .center() 
+        .center() //pq não está ficando centralizado?
         .print()
     ,
     newText("<p>Idade:</p>")
@@ -458,18 +459,7 @@ newTrial("TestEnd",
         .print()
         .wait()
 );
-newTrial("ExpCancel",
-    newText("<p><strong>Obrigada, o teste foi Cancelado.</strong></p>")
-        .css("font-size", "1.3em")
-        .center()
-        .print()
-    ,
-    newButton("Finalizar")
-        .css("font-size", "1.2em")
-        .center()
-        .print()
-        .wait(end())
-);
+
 Template("Exp_Itens_grupos_teste.csv", 
 variable => newTrial("experimental",
     newController("DashedSentence", {s: variable.Sentence})
@@ -569,4 +559,17 @@ newTrial("Final",
         .add(getButton("cancelExp"), getButton("confirm"))
         .wait()
         .log()
+);
+
+newTrial("ExpCancel",
+    newText("<p><strong>Obrigada, o teste foi Cancelado.</strong></p>")
+        .css("font-size", "1.3em")
+        .center()
+        .print()
+    ,
+    newButton("Finalizar")
+        .css("font-size", "1.2em")
+        .center()
+        .print()
+        .wait(end())
 );
