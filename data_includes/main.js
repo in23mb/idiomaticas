@@ -1,6 +1,10 @@
 PennController.ResetPrefix(null);
-
-Sequence("Start", "TCLE1","TCLE2","TCLE3","TCLE4","Profile","Instructions1","Instructions2","Instructions3","Test","Test1", "Test2", "TestEnd",randomize("experimental"), SendResults(),"WaitForResults","Final","TestCancel");
+if (getSelector("selecionaBotao").test.selected(getButton("cancelExp")).success(jump("ExpCancel"))) {
+    Sequence("Start", "TCLE1", "TCLE2", "TCLE3", "TCLE4", "Profile", "Instructions1", "Instructions2", "Instructions3", "Test", "Test1", "Test2", "TestEnd", randomize("experimental"), SendResults(), "WaitForResults", "Final");
+} else {
+    Sequence("Start", "TCLE1", "TCLE2", "TCLE3", "TCLE4", "Profile", "Instructions1", "Instructions2", "Instructions3", "Test", "Test1", "Test2", "TestEnd", randomize("experimental"), SendResults(), "WaitForResults");
+}
+Sequence("Start", "TCLE1","TCLE2","TCLE3","TCLE4","Profile","Instructions1","Instructions2","Instructions3","Test","Test1", "Test2", "TestEnd",randomize("experimental"), SendResults(),"WaitForResults","Final","ExpCancel");
 //Start: tela de boas-vindas
 //TCLE1, TCLE2, TCLE3, TCLE4: 4 partes do termo de consentimento 
 //Profile: perfil do participante
@@ -9,8 +13,8 @@ Sequence("Start", "TCLE1","TCLE2","TCLE3","TCLE4","Profile","Instructions1","Ins
 //randomize("Itens"): apresentação randômica dos itens experimentais
 //SendResults(): envio dos dados para o servidor
 //WaitForResults: esperar 3 segundos para o envio dos resultados
-//TextCancel: tela de cancelamento do teste
-//Final:tela final de encerramento
+//ExpCancel: tela de cancelamento do teste caso o participante aperte nos botões "Não Aceito" ou "Cancelar Participação"
+//Final:tela final de encerramento - apareceram dois botões: "Manter participação e finalizar" e "Cancelar Participação"
 
 newTrial("Start",
     newText("<p>Bem-vindo(a) ao nosso experimento!</p>")
@@ -163,7 +167,7 @@ newTrial("TCLE4",
     ,
     getSelector("selecionaBotao").test.selected()
         .and( getSelector("selecionaBotao").test.selected(getButton("back")).success(jump("TCLE3")) )
-        .and( getSelector("selecionaBotao").test.selected(getButton("end")).success(jump("TestCancel")) )
+        .and( getSelector("selecionaBotao").test.selected(getButton("end")).success(jump("ExpCancel")) )
         .and( getSelector("selecionaBotao").test.selected(getButton("next")).success(jump("Profile")) )
 );
 
@@ -459,7 +463,7 @@ newTrial("TestEnd",
         .print()
         .wait()
 );
-newTrial("TestCancel",
+newTrial("ExpCancel",
     newText("<p><strong>Obrigada, o teste foi Cancelado.</strong></p>")
         .css("font-size", "1.3em")
         .center()
@@ -521,3 +525,53 @@ newCanvas("botoes", 400, 80)
 .log("Grupo", variable.Group) 
 .log("Condicao", variable.Item_condition)
 ); 
+SendResults()
+//Sequence("Start", "TCLE1", "TCLE2", "TCLE3", "TCLE4", "Profile", "Instructions1", "Instructions2", "Instructions3", "Test", "Test1", "Test2", "TestEnd", randomize("experimental"), SendResults(), "WaitForResults", "Final");
+newTrial("WaitForResults",
+    newText("<p>Por favor, aguarde enquanto enviamos os resultados para o servidor.</p>")
+        .css("font-size", "1.3em")
+        .center()
+        .print()
+    ,
+    newTimer(3000)
+        .start()
+        .wait()
+    ,
+    clear()
+);
+
+newTrial("Final",
+    newText("<p>Obrigada por participar do nosso experimento!</p>")
+        .css("font-size", "1.3em")
+        .center()
+        .print()
+    ,
+    newText("<p>Seus resultados foram enviados com sucesso!</p>")
+        .css("font-size", "1.3em")
+        .center()
+        .print()
+    ,
+    newText("<p>Se desejar, você pode finalizar a participação ou cancelar a participação.</p>")
+        .css("font-size", "1.3em")
+        .center()
+        .print()
+    ,
+    newCanvas("botoes", 400, 50)  
+        .add( 0, 0, newButton("cancelExp", "Cancelar Participação")
+            .css("font-size", "1.2em")
+            .callback( jump("ExpCancel") )
+            .print()
+        ) 
+        .add( 200, 0, newButton("confirm", "Manter participação e finalizar")
+            .css("font-size", "1.2em")
+            .callback( end() )
+            .print()
+        ) 
+        .center()
+        .print()
+    ,
+    newSelector("selecionaBotao") //seletor para escolher um botão
+        .add(getButton("cancelExp"), getButton("confirm"))
+        .wait()
+        .log()
+);
