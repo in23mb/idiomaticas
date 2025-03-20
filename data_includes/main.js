@@ -5,10 +5,9 @@ newVar("participacao").global().set("manter"); // Valor inicial "manter" para a 
 Sequence(
     "Start", "TCLE1", "TCLE2", "TCLE3", "TCLE4", "Profile", 
     "Instructions1", "Instructions2", "Instructions3", 
-    "Test", "Test1", "Test2", "TestEnd", randomize("experimental"), 
-    SendResults(), "WaitForResults", 
-    getVar("participacao").test.is("cancelar").success("ExpCancel"), 
-    "Final"
+    "Test", "Test1", "Test2", "TestEnd", 
+    randomize("experimental"),  
+    SendResults(), "WaitForResults", "Final" // "ExpCancel" NÃO vai na Sequence()
 );
 //Start: tela de boas-vindas
 //TCLE1, TCLE2, TCLE3, TCLE4: 4 partes do termo de consentimento 
@@ -551,27 +550,25 @@ newTrial("Final",
     newCanvas("botoes", 500, 50)  
         .add( 0, 0, newButton("cancelExp", "Cancelar Participação")
             .css("font-size", "1.2em")
-            .callback( 
-                getVar("participacao").set("cancelar"),  // Define a participação como cancelada
-                jump("ExpCancel")  // Leva o participante para a tela de cancelamento
-            )
+            .callback( getVar("participacao").set("cancelar") )
             .print()
         ) 
         .add( 250, 0, newButton("confirm", "Manter participação e finalizar")
             .css("font-size", "1.2em")
-            .callback( 
-                getVar("participacao").set("manter"),  // Define a participação como mantida
-                end()  // Finaliza o experimento
-            )
+            .callback( getVar("participacao").set("manter") )
             .print()
         ) 
         .center()
         .print()
     ,
-    newSelector("selecionaBotao") // Seletor para os botões
+    newSelector("selecionaBotao")
         .add(getButton("cancelExp"), getButton("confirm"))
         .wait()
         .log()
+    ,
+    getVar("participacao").test.is("cancelar") 
+        .success( jump("ExpCancel") ) // Se "cancelar" foi escolhido, pula para ExpCancel
+        .failure( end() ) // Caso contrário, encerra o experimento normalmente
 );
 
 newTrial("ExpCancel",
