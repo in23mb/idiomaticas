@@ -1,10 +1,6 @@
 PennController.ResetPrefix(null);
-if (getSelector("selecionaBotao").test.selected(getButton("cancelExp")).success(jump("ExpCancel"))) {
-    Sequence("Start", "TCLE1", "TCLE2", "TCLE3", "TCLE4", "Profile", "Instructions1", "Instructions2", "Instructions3", "Test", "Test1", "Test2", "TestEnd", randomize("experimental"), SendResults(), "WaitForResults", "Final");
-} else {
-    Sequence("Start", "TCLE1", "TCLE2", "TCLE3", "TCLE4", "Profile", "Instructions1", "Instructions2", "Instructions3", "Test", "Test1", "Test2", "TestEnd", randomize("experimental"), SendResults(), "WaitForResults");
-}
-Sequence("Start", "TCLE1","TCLE2","TCLE3","TCLE4","Profile","Instructions1","Instructions2","Instructions3","Test","Test1", "Test2", "TestEnd",randomize("experimental"), SendResults(),"WaitForResults","Final","ExpCancel");
+
+Sequence("Start", "TCLE1", "TCLE2", "TCLE3", "TCLE4", "Profile", "Instructions1", "Instructions2", "Instructions3", "Test", "Test1", "Test2", "TestEnd", randomize("experimental"), SendResults(), "WaitForResults", "Final");
 //Start: tela de boas-vindas
 //TCLE1, TCLE2, TCLE3, TCLE4: 4 partes do termo de consentimento 
 //Profile: perfil do participante
@@ -13,8 +9,7 @@ Sequence("Start", "TCLE1","TCLE2","TCLE3","TCLE4","Profile","Instructions1","Ins
 //randomize("Itens"): apresentação randômica dos itens experimentais
 //SendResults(): envio dos dados para o servidor
 //WaitForResults: esperar 3 segundos para o envio dos resultados
-//ExpCancel: tela de cancelamento do teste caso o participante aperte nos botões "Não Aceito" ou "Cancelar Participação"
-//Final:tela final de encerramento - apareceram dois botões: "Manter participação e finalizar" e "Cancelar Participação"
+//Final: tela final de encerramento
 
 newTrial("Start",
     newText("<p>Bem-vindo(a) ao nosso experimento!</p>")
@@ -150,7 +145,7 @@ newTrial("TCLE4",
         ) 
         .add( 200, 0, newButton("end", "Não Aceito")
             .css("font-size", "1.2em")
-            .callback( jump("TestEnd") )
+            .callback( jump("ExpCancel") )
             .print()
         ) 
         .add( 400, 0, newButton("next", "ACEITO participar!")
@@ -174,7 +169,7 @@ newTrial("TCLE4",
 newTrial("Profile",
     newText("<p>Obrigada por confirmar sua participação! Agora precisamos que você nos dê algumas informações para confirmarmos o seu perfil.</p>")
         .css("font-size", "1.4em")
-        .center() //pq não está ficando centralizado?
+        .center() 
         .print()
     ,
     newText("<p>Idade:</p>")
