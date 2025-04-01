@@ -590,5 +590,3 @@ newTrial("ExpCancel",
         .print()
         .wait(end())
 );
-
-.setOption("countsForProgressBar", false);
