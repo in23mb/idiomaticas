@@ -542,7 +542,7 @@ newTrial("Final",
         .center()
         .print()
     ,
-    newText("<p>Se desejar, você pode finalizar a participação ou cancelar a participação.</p>")
+    newText("<p>Se desejar, você pode cancelar a participação ou manter a participação.</p>")
         .css("font-size", "1.3em")
         .center()
         .print()
