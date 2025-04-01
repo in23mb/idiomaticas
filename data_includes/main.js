@@ -1,5 +1,5 @@
 PennController.ResetPrefix(null);
-PennController.DebugOff();
+
 
 newVar("participacao").global().set("manter"); // Valor inicial "manter" para a variável global "participacao"
 
@@ -591,3 +591,4 @@ newTrial("ExpCancel",
         .wait(end())
 );
 
+.setOption("countsForProgressBar", false);
