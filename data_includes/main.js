@@ -10,7 +10,7 @@ Sequence(
     randomize("experimental"),  
     SendResults(), "WaitForResults", "Final" // "ExpCancel" NÃO vai na Sequence()
 );
-//Start: tela de boas-vindas
+//Start: tela de boas-v indas
 //TCLE1, TCLE2, TCLE3, TCLE4: 4 partes do termo de consentimento 
 //Profile: perfil do participante
 //Instructions1, Instructions2, Instructions3: instruções divididas em 3 partes 
