@@ -570,13 +570,13 @@ newTrial("Final",
     getSelector("selecionaBotao").test.selected(getButton("cancelExp"))
         .success(
             getVar("participacao").set("cancelar"),
-            jump("ExpCancel") // Agora o jump funciona corretamente
+            jump("ExpCancel") // Pula para a tela de cancelamento
         )
     ,
     getSelector("selecionaBotao").test.selected(getButton("confirm"))
         .success(
             getVar("participacao").set("manter"),
-            end() // Termina o experimento corretamente
+            end() // Termina o experimento e envia os resultados
         )
 );
 
