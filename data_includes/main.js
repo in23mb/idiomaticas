@@ -1,5 +1,5 @@
 PennController.ResetPrefix(null);
-
+DebugOff();
 
 newVar("participacao").global().set("manter"); // Valor inicial "manter" para a variável global "participacao"
 
