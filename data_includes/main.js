@@ -206,7 +206,9 @@ newTrial("Profile",
     ,
     newDropDown("Audicao", "Selecione")
         .css("font-size", "1.2em")
-        .add("Surdo(a)", "Ouvinte")
+        .add("Surdo(a) filho(a) de pais ouvintes", "Surdo(a) filho(a) de pais surdos", "Surdo(a) filho(a) de pais ouvintes e surdos", 
+            "Ouvinte filho(a) de pais ouvintes" , "Ouvinte filho(a) de pais surdos", "Ouvinte filho(a) de pais ouvintes e surdos"
+            )
         .print()
     ,
     newText("<p>Nacionalidade:</p>")
